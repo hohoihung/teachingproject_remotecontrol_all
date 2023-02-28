@@ -11,7 +11,17 @@ makerbit.connectSerialMp3(DigitalPin.P12, DigitalPin.P13)
 makerbit.setMp3Volume(22)
 serial.redirectToUSB()
 pins.setPull(DigitalPin.P0, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
 basic.showIcon(IconNames.Pitchfork)
+basic.forever(function () {
+    serial.writeValue("InfraRed Obstacle1 ", pins.digitalReadPin(DigitalPin.P12))
+    serial.writeValue("InfraRed Obstacle2 ", pins.digitalReadPin(DigitalPin.P13))
+    serial.writeValue("InfraRed Obstacle3 ", pins.digitalReadPin(DigitalPin.P14))
+    serial.writeValue("InfraRed Obstacle3 ", pins.digitalReadPin(DigitalPin.P15))
+    basic.pause(2000)
+})
 basic.forever(function () {
     if (pins.analogReadPin(AnalogPin.P0) < 25 && pins.analogReadPin(AnalogPin.P0) > 10) {
         radio.sendNumber(10)
