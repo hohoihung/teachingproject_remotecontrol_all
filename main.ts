@@ -19,7 +19,7 @@ basic.forever(function () {
     serial.writeValue("InfraRed Obstacle1 ", pins.digitalReadPin(DigitalPin.P12))
     serial.writeValue("InfraRed Obstacle2 ", pins.digitalReadPin(DigitalPin.P13))
     serial.writeValue("InfraRed Obstacle3 ", pins.digitalReadPin(DigitalPin.P14))
-    serial.writeValue("InfraRed Obstacle3 ", pins.digitalReadPin(DigitalPin.P15))
+    serial.writeValue("InfraRed Obstacle4 ", pins.digitalReadPin(DigitalPin.P15))
     basic.pause(2000)
 })
 basic.forever(function () {
