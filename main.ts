@@ -14,6 +14,7 @@ pins.setPull(DigitalPin.P10, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
 basic.showIcon(IconNames.Pitchfork)
 basic.forever(function () {
     serial.writeValue("InfraRed Obstacle1 ", pins.digitalReadPin(DigitalPin.P12))

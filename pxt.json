@@ -7,7 +7,8 @@
         "microphone": "*",
         "dfplayermini": "github:51bit/dfplayermini#v0.1.6",
         "MakerBit-MP3": "github:1010technologies/pxt-makerbit-mp3#v1.0.10",
-        "tinkercademy-tinker-kit": "github:tinkertanker/pxt-tinkercademy-tinker-kit#v1.1.1"
+        "tinkercademy-tinker-kit": "github:tinkertanker/pxt-tinkercademy-tinker-kit#v1.1.1",
+        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v5.1.7"
     },
     "files": [
         "main.blocks",
