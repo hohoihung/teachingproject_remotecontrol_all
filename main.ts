@@ -10,7 +10,7 @@ radio.setGroup(8)
 makerbit.connectSerialMp3(DigitalPin.P12, DigitalPin.P13)
 makerbit.setMp3Volume(22)
 serial.redirectToUSB()
-pins.setPull(DigitalPin.P0, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P10, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
@@ -23,20 +23,20 @@ basic.forever(function () {
     basic.pause(2000)
 })
 basic.forever(function () {
-    if (pins.analogReadPin(AnalogPin.P0) < 25 && pins.analogReadPin(AnalogPin.P0) > 10) {
+    if (pins.analogReadPin(AnalogPin.P10) < 25 && pins.analogReadPin(AnalogPin.P10) > 10) {
         radio.sendNumber(10)
-        serial.writeValue("Key A", pins.analogReadPin(AnalogPin.P0))
-    } else if (pins.analogReadPin(AnalogPin.P0) < 130 && pins.analogReadPin(AnalogPin.P0) > 120) {
+        serial.writeValue("Key A", pins.analogReadPin(AnalogPin.P10))
+    } else if (pins.analogReadPin(AnalogPin.P10) < 130 && pins.analogReadPin(AnalogPin.P10) > 120) {
         radio.sendNumber(11)
-        serial.writeValue("Key B", pins.analogReadPin(AnalogPin.P0))
-    } else if (pins.analogReadPin(AnalogPin.P0) < 210 && pins.analogReadPin(AnalogPin.P0) > 190) {
+        serial.writeValue("Key B", pins.analogReadPin(AnalogPin.P10))
+    } else if (pins.analogReadPin(AnalogPin.P10) < 210 && pins.analogReadPin(AnalogPin.P10) > 190) {
         radio.sendNumber(12)
-        serial.writeValue("Key C", pins.analogReadPin(AnalogPin.P0))
-    } else if (pins.analogReadPin(AnalogPin.P0) < 230 && pins.analogReadPin(AnalogPin.P0) > 220) {
+        serial.writeValue("Key C", pins.analogReadPin(AnalogPin.P10))
+    } else if (pins.analogReadPin(AnalogPin.P10) < 230 && pins.analogReadPin(AnalogPin.P10) > 220) {
         radio.sendNumber(13)
-        serial.writeValue("Key D", pins.analogReadPin(AnalogPin.P0))
-    } else if (pins.analogReadPin(AnalogPin.P0) < 300 && pins.analogReadPin(AnalogPin.P0) > 290) {
+        serial.writeValue("Key D", pins.analogReadPin(AnalogPin.P10))
+    } else if (pins.analogReadPin(AnalogPin.P10) < 300 && pins.analogReadPin(AnalogPin.P10) > 290) {
         radio.sendNumber(14)
-        serial.writeValue("Key E", pins.analogReadPin(AnalogPin.P0))
+        serial.writeValue("Key E", pins.analogReadPin(AnalogPin.P10))
     }
 })
